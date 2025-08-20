@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="alder tilsammen"></p>
+    <p id="alder genomsnitt"></p>
+
+<script>
+    let AgeDad=37
+    let AgeMom=32
+    let AgeDaughter=7
+    let AgeSon=2
+
+    let ageSummary = AgeDad+AgeMom+AgeDaughter+AgeSon
+    let ageAverage = ageSummary/4
+
+    document.getElementById("alder tilsammen").innerHTML= ageSummary
+
+    document.getElementById("alder genomsnitt").innerHTML= ageAverage
+</script>
+</body>
+</html>
