@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svantes karakterer</title>
+</head>
+<body>
+    <h1>svantes karakter</h1>
+    <p id="resultat"></p>
+
+
+    <script>
+        //registrere svantes resultater på deleksamene
+
+        var delEksamen1 = 79;
+        var delEksamen2 = 82;
+        var delEksamen3 = 71;
+        var delEksamen4 = 84;
+        //oppretter teller for antall eksamner som starter med 0
+        var antallEksamnerBestatt = 0;
+        //skjekk om deleksamen er bestått
+        
+
+        if(delEksamen1 >= 40) {
+            antallEksamnerBestatt++;
+        }
+        if(delEksamen2 >= 40) {
+            antallEksamnerBestatt++;
+        }
+        if(delEksamen3 >= 40) {
+            antallEksamnerBestatt++;
+        }
+        if(delEksamen4 >= 40) {
+            antallEksamnerBestatt++;
+        }
+
+        //skjekker om alle deleksamner er bestått
+        if(antallEksamnerBestatt === 4){
+
+            //regne ut karakter
+
+            var sumDelEksamner = delEksamen1 + delEksamen2 + delEksamen3 + delEksamen4;
+            //tom variabel som skal inneholde karakter
+
+            var karakter;
+
+            if(sumDelEksamner > 360) {
+                karakter = "A";
+            } else if (sumDelEksamner > 320) {
+                karakter = "B";
+            } else if (sumDelEksamner > 240) {
+                karakter = "C";
+            } else if (sumDelEksamner > 200 ) {
+                karakter = "D";
+            } else if (sumDelEksamner >= 160) {
+                karakter = "E";
+            } else {
+                karakter = "F";
+            }
+            // skrive ut resultatet
+            document.getElementById("resultat").innerHTML = "svante har bestått kurset med karakter " + karakter;
+        }  else{
+            document.getElementById("resultat").innerHTML = "svante har ikke bestått alle deleksamnene, og derfor ikke bestått kurset"
+        }
+
+
+        
+
+    </script>
+</body>
+</html>
