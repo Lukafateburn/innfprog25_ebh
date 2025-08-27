@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional_logic - cheat sheet</title>
+</head>
+<body>
+
+    <h2>are you qualified to take drivers licence</h2>
+    <p id="carmsg"></p>
+    <script>
+        //age and qualification test
+        const age = 28
+        const tg_passed = true
+
+        //if-test
+        if(age >=18 && tg_passed === true){
+            document.getElementById("carmsg").innerHTML = "qualified"
+        }
+        else {
+            document.getElementById("carmsg").innerHTML = "not qualified"
+        }
+
+    </script>
+</body>
+</html>
