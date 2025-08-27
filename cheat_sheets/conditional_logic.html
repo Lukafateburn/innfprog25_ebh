@@ -9,18 +9,52 @@
 
     <h2>are you qualified to take drivers licence</h2>
     <p id="carmsg"></p>
+
+    <h2>can the player open the door?</h2>
+    <p id ="doormsg"></p>
+
+    <h2>can i retire?</h2>
+    <p id = "retiremsg"></p>
     <script>
         //age and qualification test
         const age = 28
         const tg_passed = true
 
         //if-test
-        if(age >=18 && tg_passed === true){
+        if(age >= 18 && tg_passed === true){
             document.getElementById("carmsg").innerHTML = "qualified"
         }
         else {
             document.getElementById("carmsg").innerHTML = "not qualified"
         }
+
+        //test if a door is locked, check if the player has the key
+        const door_locked = true
+
+        const backpack = "key"
+
+        let utskrift = document.getElementById("doormsg")
+
+        if(door_locked === false){
+            utskrift.innerHTML = "yes"
+        } else {
+            if(backpack === "key"){
+                utskrift.innerHTML = "yes"
+            } else {
+                utskrift.innerHTML = "no"
+            }
+            
+        } 
+
+        //check of possible retirement age
+        if(age >= 62 && age < 67){
+            retiremsg.innerHTML = "you can retire with AFP"
+        } else if(age >= 67){
+            retiremsg.innerHTML = "you can retire with full pention"
+        } else {
+        retiremsg.innerHTML = `you can reite with AFP in ${62 - age} years, and full pention in ${67 - age} years.`
+        }
+
 
     </script>
 </body>
