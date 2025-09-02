@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><dyr class="html"></dyr></title>
+</head>
+<body>
+
+    <p id="dyrUtskrift"></p>
+    <p>antall dyr i listen:<span id = "dyrmengde"></span></p>
+    <script>
+        //Lager array liste på 10 forskjellige dyr fra 0-9
+        const dyr = ["Hund", "Katt", "Hest", "Pingvin", "Mus", "Rev", "Panda", "Bjørn", "Ekorn", "Kanin"]
+
+        //Lager variabel og henter opp dyr 5 og dyr 7 inn i variabelen 
+        const utskrift = `Her er det listet opp noen dyr, for eksempel ${dyr[5]} og ${dyr[7]}`
+
+        //Printer ut variabelen til nettsiden
+        document.getElementById("dyrUtskrift").innerHTML = utskrift
+
+        // legge inn nye dyr i listen
+        dyr.push("tiger")
+
+        // tilsier hvor lang arrayen er
+        document.getElementById("dyrmengde").innerHTML = dyr.length
+        //sorterer dyrelisten alfabetisk
+        dyr.sort()
+        
+        //en kommentert ut måte å ha en reversert alfabetisk liste
+        //dyr.sort().reverse
+    </script>
+
+</body>
+</html>
