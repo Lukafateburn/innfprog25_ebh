@@ -14,10 +14,10 @@
         const dyr = ["Hund", "Katt", "Hest", "Pingvin", "Mus", "Rev", "Panda", "Bjørn", "Ekorn", "Kanin"]
 
         //Lager variabel og henter opp dyr 5 og dyr 7 inn i variabelen 
-        const utskrift = `Her er det listet opp noen dyr, for eksempel ${dyr[5]} og ${dyr[7]}`
+        //const utskrift = `Her er det listet opp noen dyr, for eksempel ${dyr[5]} og ${dyr[7]}`
 
         //Printer ut variabelen til nettsiden
-        document.getElementById("dyrUtskrift").innerHTML = utskrift
+        document.getElementById("dyrUtskrift").innerHTML = dyr
 
         // legge inn nye dyr i listen
         dyr.push("tiger", "ekorn")
@@ -26,7 +26,7 @@
         document.getElementById("dyrmengde").innerHTML = dyr.length
 
         // const antalldyr = dyr.length
-        
+
         //sorterer dyrelisten alfabetisk
         dyr.sort()
         
