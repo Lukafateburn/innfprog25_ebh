@@ -77,23 +77,13 @@
         //PREPARE GAME CONFIG AND VARIABLES
         //TODO: config
         const gameConfig = {
-            playerName: "Emil",
+            playerName: "",
             energy: 0 ,
             points: 0 ,
             duration: 0
 
         }
-
-        console.log(gameConfig)
-
-        //TODO: print playerinfo to HTML
-        document.getElementById("playerName").innerHTML = gameConfig.playerName
-        document.getElementById("energy").innerHTML = gameConfig.energy
-        document.getElementById("points").innerHTML = gameConfig.points
-        document.getElementById("duration").innerHTML = gameConfig.duration
-
-        //TODO: notebook
-        const notebook = {
+            const notebook = {
             variables: 0,
             arrays: 0,
             loops: 0,
@@ -101,6 +91,28 @@
         }
 
         console.log(notebook)
+        console.log(gameConfig)
+        function updateStaticUI () {
+                    //TODO: print playerinfo to HTML
+            let playerNameHTML = document.getElementById("playerName")
+            if(gameConfig.playerName === "") {
+                document.getElementById("playerName").innerHTML = "Waiting for player..."
+                for (key in gameConfig){
+                    key === playerName ? playerName : gameConfig[key] = 0
+                }
+
+                for(key in notebook){
+                    notebook[key] = 0 
+                }
+            } else {
+                document.getElementById("playerName").innerHTML = gameConfig.playerName
+            }
+        document.getElementById("energy").innerHTML = gameConfig.energy
+        document.getElementById("points").innerHTML = gameConfig.points
+        document.getElementById("duration").innerHTML = gameConfig.duration
+
+        //TODO: notebook
+
         
         
         //TODO: print notebook info to HTML
@@ -109,8 +121,8 @@
         document.getElementById("arrays").innerHTML = notebook.arrays
         document.getElementById("loops").innerHTML = notebook.loops
         document.getElementById("functions").innerHTML = notebook.functions
-
-
+        }
+        updateStaticUI()
         //(BONUS) TODO: function for all prints
         
     </script>
