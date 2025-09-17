@@ -23,7 +23,6 @@
                 <img src="avatar.png" alt="Navn Navnesen" />
                 <p>Navn Navnesen<br />navn@email.com</p>
             </article>
-
             <article class="card">
                 <img src="avatar.png" alt="Navn Navnesen" />
                 <p>Navn Navnesen<br />navn@email.com</p>
@@ -37,7 +36,7 @@
     </footer>
 
     <script>
-        //script taggen sto det <scripttt> som ble endret til <skript> for at taggen skal fungere
+        //endret skripttt taggen til script
         //Variabel with company name
         const company = "Programmeriet"
 
@@ -47,14 +46,15 @@
             {name: "Jens Jensen", position: "Programmerer", email: "jens.jensen@email.com", office: "323", image: "man2"},
             {name: "Trine Trinesdotter", position: "Programmerer", email: "trine.trinesdotter@email.com", office: "304", image: "woman"},
         ]
-            //img sto som "img   endret til "img"
+
         //Secret keys to access url and images
+        //endret "img til "img"
         let images_folder = "img"
         let secret_key = 0
         let ak_key
         
         //Turn on or off safeguard to allow system to run
-        const safeguard = false
+        const safeguard = true
         
         //Control of safeguard to create image folder name
         if(safeguard === true) {
@@ -62,10 +62,9 @@
         }
         const safe_images_folder = images_folder += ak_key
         //endret console.logg til console.log
-        console.log("Image folder: " + safe_images_folder)
+        console.log("Image_folder: " + safe_images_folder)
 
         let HTML_employees = ""
-        
 
         //Control of safeguard to print employee list
         if(safeguard === true) {
@@ -74,10 +73,11 @@
                     <p><strong>${e.name}</strong></p>
                     <p>${e.position} | Kontor: ${e.office}</p>
                     <p>${e.email}</p>
-                </article>`)  
-            
-                //endret fra HTML_employeeees til HTML_employees
-                document.getElementbyId("employee_list").innerHTML = HTML_employees
+                </article>`)
+                
+                //endret HTML_employeeees til HTML_employees
+                //endret fra document.getElementbyId til document.getElementById
+                document.getElementById("employee_list").innerHTML = HTML_employees
         }
 
         //System prints
