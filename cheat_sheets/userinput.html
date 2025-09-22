@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userinput</title>
+</head>
+<body>
+    <!--knapp med HTML attributt-->
+    <button onClick="printMessage(2025)">Trykk her, ikke virus ^^</button>
+    <!-- knapp med eventlistener-->
+     <button id="printEventMessage">Button</button>
+    <!--skjema-->
+    
+        <label for="name">
+            Name:
+            <input type="text" id="name">
+            <button id="submitform">Submit</button>
+        </label>  
+        
+      
+    <script>
+        function printMessage(year){
+        
+            console.log("hei,verden, året er " + year)
+        }
+
+        //knapp med EventListener
+        function printEventMessage(){
+            console.log ("hei, verden, igjen.")
+        }
+
+        const EventBtn = document.getElementById("printEventMessage")
+
+        EventBtn.addEventListener("click", () => {
+            printEventMessage()
+        })
+
+        //Ta imot brukerinput fra skjemafeltet
+        function getUserInput(){
+            let getUsername = document.getElementById("name")
+            console.log(getUsername.value)
+            userArray.push(getUsername.value)
+            getUsername.value = ""
+        }
+
+        const userArray = []
+
+        const submitform = document.getElementById("submitform")
+
+        submitform.addEventListener("click", () => {
+            getUserInput()
+        })
+    </script>
+
+</body>
+</html>
