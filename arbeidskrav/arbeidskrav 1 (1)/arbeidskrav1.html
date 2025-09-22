@@ -54,13 +54,14 @@
         let ak_key
         
         //Turn on or off safeguard to allow system to run
-        const safeguard = true
+        //safeguard satt fra false til true
+        const safeguard = false
         
         //Control of safeguard to create image folder name
         if(safeguard === true) {
             ak_key = secret_key + 1
         }
-        const safe_images_folder = images_folder += ak_key
+        const safe_images_folder = images_folder + ak_key
         //endret console.logg til console.log
         console.log("Image_folder: " + safe_images_folder)
 
