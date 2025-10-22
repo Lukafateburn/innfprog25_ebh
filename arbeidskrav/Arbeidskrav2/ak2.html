@@ -16,7 +16,7 @@
     <p>Finnes ordet "problemløsning" i Programmeringsord-arrayen? <span id="problemlosning_sjekk"></span></p>
     <h2>Problem 3</h2>
     <p>Gjennomsnittet av tallene i tall_array_en er <span id="avg_array_one"></span></p>
-    <p>Gjennomsnittet av tallene i tall_array_to er <span id="avg_array_one"></span></p>
+    <p>Gjennomsnittet av tallene i tall_array_to er <span id="avg_array_two"></span></p>
 
     <script>
         //PROBLEM 1
@@ -29,14 +29,14 @@
         
     function generateColor(){
     while( random_color_code.length < 7 ){
-     random_color_code += hexadecimal_characters_array[ Math.floor( Math.random() * hexadecimal_characters_array.length) ]
+     random_color_code += hexadecimal_characters_array[ Math.floor( Math.random() * hexadecimal_characters_array.length ) ]
     }
 
      return random_color_code
     }
 
     document.getElementById("random_color").innerHTML = generateColor()
-    console.log(generateColor())
+    
 
 
         
@@ -47,11 +47,24 @@
 
         //Din kode for å løse problem 2 her.
 
+
+            function doesArrayContain(input) {
+      return programming_words.includes(input)
+    }
+        document.getElementById("problemlosning_sjekk").innerHTML = doesArrayContain("problemlosning")
+        document.getElementById("algoritme_sjekk").innerHTML = doesArrayContain("algoritme")
+        document.getElementById("betingelse_sjekk").innerHTML = doesArrayContain("betingelse")
+
         //PROBLEM 3
         const tall_array_en = [9, 13, 5, 62, 11, 6, 28, 31, 17]
         const tall_array_to = [23, 76, 88, 13, 56, 90, 42]
 
-        //Din kode for å løse problem 3 her.
+        //Din kode for å løse problem 3 her.s
+        function averageNumber(incomingarray){
+            return incomingarray.reduce((total, current) => total + current, 0) / incomingarray.length
+        }
+        document.getElementById("avg_array_one").innerHTML = averageNumber(tall_array_en)
+        document.getElementById("avg_array_two").innerHTML = averageNumber(tall_array_to)
     </script>
 </body>
 </html>
